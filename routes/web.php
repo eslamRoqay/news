@@ -42,9 +42,7 @@ Route::group(
     ], function () {
 
 
-    Route::get('/', function () {
-        return redirect()->route('admin');
-    })->name('front.home');
+    Route::get('/', [HomeController::class, 'index'])->name('front.home');
 
 
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
