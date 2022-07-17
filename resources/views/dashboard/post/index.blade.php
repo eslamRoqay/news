@@ -1,4 +1,4 @@
-@php($title='البلوجز')
+@php($title=trans('posts.posts'))
 @extends('adminLayouts.app')
 @section('title')
    {{$title}}

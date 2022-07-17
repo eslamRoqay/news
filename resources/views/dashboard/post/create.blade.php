@@ -1,4 +1,4 @@
-@php($title='اضافه بلوج')
+@php($title=trans('posts.create_post'))
 @extends('adminLayouts.app')
 @section('title')
     {{$title}}

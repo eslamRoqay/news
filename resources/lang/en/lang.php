@@ -3,6 +3,7 @@
 return [
     'language' => 'language',
     'posts' => 'Posts',
+    'logout' => 'Log Out',
     'customerCount' => 'Customer Count',
     'postCount' => 'Post Count',
     'dashboard' => 'Dashboard',

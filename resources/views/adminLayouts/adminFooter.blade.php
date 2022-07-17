@@ -57,8 +57,7 @@
                         </span>
                     </a>
                             <a href="{{route('logout')}}"
-                               class="btn btn-sm btn-light-success font-weight-bolder py-2 px-5">تسجيل
-                                الخروج</a>
+                               class="btn btn-sm btn-light-success font-weight-bolder py-2 px-5">{{trans('lang.logout')}}</a>
                     <br>
                 </div>
             </div>
@@ -86,7 +85,7 @@
                         </div>
                     </div>
                     <div class="navi-text">
-                        <div class="font-weight-bold">الملف الشخصي</div>
+                        <div class="font-weight-bold">{{trans('lang.profile')}}</div>
                     </div>
                 </div>
             </a>

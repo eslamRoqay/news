@@ -3,6 +3,7 @@
 return [
 
     'profile' => 'الصفحة الشخصية',
+    'logout' => 'تسجيل الخروج',
     'language' => 'اللغه',
     'posts' => 'البلوجز',
     'customerCount' => 'عدد العملاء',
