@@ -58,7 +58,7 @@ class UserController extends GeneralController
     }
     public function show($id)
     {
-        $data = $this->model::with('Details')->findOrFail($id);
+        $data = $this->model::findOrFail($id);
         return view('dashboard.' . $this->viewPath . '.details', compact('data'));
     }
     public function edit($id)
