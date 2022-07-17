@@ -118,11 +118,11 @@
                                             &nbsp;
                                         @if($properties['native'] == 'العربية')
                                             <span class="symbol symbol-20 mr-3">
-														<img src="assets/media/svg/flags/133-saudi-arabia.svg" alt="">
+														<img src="{{url('/')}}/assets/media/svg/flags/133-saudi-arabia.svg" alt="">
 													</span>
                                         @else()
                                         <span class="symbol symbol-20 mr-3">
-														<img src="assets/media/svg/flags/226-united-states.svg" alt="">
+														<img src="{{url('/')}}/assets/media/svg/flags/226-united-states.svg" alt="">
 													</span>
                                         @endif
                                     </a>

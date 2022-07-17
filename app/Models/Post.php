@@ -16,7 +16,13 @@ class Post extends Model
     {
         return $this->hasMany(Comment::class);
     }
-
+    public function getImageAttribute($image)
+    {
+        if (!empty($image)) {
+            return asset($image);
+        }
+        return asset('default-image.png');
+    }
     public function getTitleAttribute($value)
     {
         if (app()->getLocale() == 'ar') {
