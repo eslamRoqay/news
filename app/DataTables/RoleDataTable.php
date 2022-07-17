@@ -71,10 +71,7 @@ class RoleDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            Column::make('id')
-                ->title("<input type='checkbox' id='DataSelect' class='select-checkbox'>")
-                ->orderable(false)
-                ->width(30),
+ 
             Column::make('name')->title(trans('admins.name')),
             Column::make('action')->title(trans('admins.action')),
         ];
