@@ -15,11 +15,11 @@ class PostResource extends JsonResource
     public function toArray($request)
     {
        return [
-         'title'=>$this->content,
+         'title'=>$this->title,
          'content'=>$this->content,
          'image'=>url($this->image),
-         'comments'=> CommentResource::collection($this->comments),
-         'comments_count'=>count($this->comments),
+           'comments_count'=>count($this->comments),
+           'comments'=> CommentResource::collection($this->comments),
        ];
     }
 }

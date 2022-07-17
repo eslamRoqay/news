@@ -77,8 +77,8 @@ class PostDatatable extends DataTable
     protected function getColumns()
     {
         return [
-            Column::make('title')->title(trans('posts.title')),
-            Column::make('content')->title(trans('posts.content')),
+            Column::make('title_en')->title(trans('posts.title_en')),
+            Column::make('content_en')->title(trans('posts.content_en')),
             Column::make('image')->title(trans('posts.image')),
             Column::make('action')->title(trans('posts.action')),
         ];

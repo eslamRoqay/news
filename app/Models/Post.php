@@ -8,10 +8,29 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
-    protected $guarded=[];
+
+    protected $guarded = ['id'];
+
 
     public function comments()
     {
         return $this->hasMany(Comment::class);
+    }
+
+    public function getTitleAttribute($value)
+    {
+        if (app()->getLocale() == 'ar') {
+            return $this->title_ar;
+        } else {
+            return $this->title_en;
+        }
+    }
+    public function getContentAttribute($value)
+    {
+        if (app()->getLocale() == 'ar') {
+            return $this->content_ar;
+        } else {
+            return $this->content_en;
+        }
     }
 }

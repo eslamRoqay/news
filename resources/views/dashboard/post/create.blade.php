@@ -40,14 +40,15 @@
 @endsection
 @section('script')
     <script>
+        var avatar2 = new KTImageInput('kt_image_1');
+    </script>
+    <script>
         $(document).ready(function() {
             $(document).on('submit', 'form', function() {
                 $('button').attr('disabled', 'disabled');
             });
         });
     </script>
-    <script >
-        var avatar2 = new KTImageInput('kt_image_1');
-    </script>
+
 @endsection
 
