@@ -18,7 +18,7 @@
                 <li class="menu-item menu-item-submenu @if(request()->segment(2) == 'posts') menu-item-open @endif "
                     aria-haspopup="true" data-menu-toggle="hover">
                     <a href="{{route('posts')}}" class="menu-link menu-toggle">
-                        <i class="menu-icon fas fa-user"></i>
+                        <i class="menu-icon fas fa-pen"></i>
                         <span class="menu-text">{{__('lang.posts')}}</span>
                     </a>
                 </li>
