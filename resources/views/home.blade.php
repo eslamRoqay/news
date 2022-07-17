@@ -69,7 +69,7 @@
                     <h3 class="card-title font-weight-bolder text-dark">{{trans('lang.recent_users')}}</h3>
                     <div class="card-toolbar">
                         <div class="dropdown dropdown-inline">
-                            <a href="#" class="btn btn-success font-weight-bolder font-size-sm mr-3">{{trans('lang.all_users')}}</a>
+                            <a href="{{route('users')}}" class="btn btn-success font-weight-bolder font-size-sm mr-3">{{trans('lang.all_users')}}</a>
                         </div>
                     </div>
                 </div>
