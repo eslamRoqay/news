@@ -28,7 +28,7 @@
         <div class="card-header">
             @can('create-admins')
             <a href="{{route('admins.create')}}" class="btn btn-sm btn-light-success font-weight-bolder mr-2">
-                <i class="fa fa-plus"></i>{{trans('lang.create')}}}</a>
+                <i class="fa fa-plus"></i>{{trans('lang.create')}}</a>
 
             @endcan
         </div>

@@ -29,7 +29,7 @@
             @can('create-users')
 
             <a href="{{route('users.create')}}" class="btn btn-sm btn-light-success font-weight-bolder mr-2">
-                <i class="fa fa-plus"></i>{{trans('lang.create')}}}</a>
+                <i class="fa fa-plus"></i>{{trans('lang.create')}}</a>
             @endcan
         </div>
         </div>
