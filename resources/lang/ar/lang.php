@@ -9,6 +9,7 @@ return [
     'postCount' => 'عدد البلوجز',
     'dashboard' => 'الصفحة الرئيسية',
     'recent_users' => 'احدث العملاء',
+    'create' => 'اضـافـه',
     'all_users' => 'كل العملاء',
     'statuschanged' => 'تم تغير الحاله بنجاح',
     'you_are_not_active' => 'انت غير مفعل يرجى التواصل مع الاداره للتفعيل',

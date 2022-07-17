@@ -18,7 +18,7 @@
             </li>
             <li class="breadcrumb-item">
                 <a href="{{route('admin')}}"
-                   class="text-muted">الصفحة الرئيسية</a>
+                   class="text-muted">{{__('lang.dashboard')}}</a>
             </li>
         </ul>
         <!--end::Breadcrumb-->

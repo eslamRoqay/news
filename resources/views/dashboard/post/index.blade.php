@@ -14,7 +14,7 @@
         <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
             <li class="breadcrumb-item">
                 <a href="{{route('admin')}}"
-                   class="text-muted">الصفحة الرئيسية</a>
+                   class="text-muted">{{__('lang.dashboard')}}</a>
             </li>
 
         </ul>
@@ -24,12 +24,12 @@
 @section('content')
 
     <div class="card">
-        <div class="text-right">
+        <div class="text-right">    
         <div class="card-header">
             @can('create-posts')
 
             <a href="{{route('posts.create')}}" class="btn btn-sm btn-light-success font-weight-bolder mr-2">
-                <i class="fa fa-plus"></i>اضـافـه</a>
+                <i class="fa fa-plus"></i>{{trans('lang.create')}}}</a>
             @endcan
         </div>
         </div>

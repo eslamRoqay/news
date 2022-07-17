@@ -7,6 +7,7 @@ return [
     'postCount' => 'Post Count',
     'dashboard' => 'Dashboard',
     'recent_users' => 'Recent Users',
+    'create' => 'Create',
     'all_users' => 'All Users',
     'profile' => 'profile',
     'statuschanged' => 'status changed successfully',
