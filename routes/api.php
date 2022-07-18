@@ -1,13 +1,8 @@
 <?php
 
-use App\Http\Controllers\Api\AddressController;
-use App\Http\Controllers\Api\CartController;
-use App\Http\Controllers\Api\Postcontroller;
+use App\Http\Controllers\Api\PostController;
 use App\Http\Controllers\Api\UserController;
-use App\Http\Controllers\Api\AppController;
-use App\Http\Controllers\Api\HomeController;
-use App\Http\Controllers\Api\ProductController;
-use App\Http\Controllers\Api\BrandController;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
