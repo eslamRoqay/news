@@ -15,7 +15,7 @@
             @can('read-users')
                 <li class="breadcrumb-item">
                     <a href="{{route('users')}}"
-                       class="text-muted">المستخدمين</a>
+                       class="text-muted">{{trans('posts.posts')}}</a>
                 </li>
             @endcan
             <li class="breadcrumb-item">
@@ -27,55 +27,83 @@
     </div>
 @endsection
 @section('content')
-
-        <div class="card">
-            <div class="card-body row">
-                <div class="form-group  col-4">
-                    <label>الاسم<span
-                            class="text-danger">*</span></label>
-                    <input name="name" placeholder="ادخل الاسم" value="{{  $data->name ?? ''}}" class="form-control "
-                           type="text"
-                           maxlength="255" disabled/>
+    <div class="card">
+        <div class="card-body row">
+            <div class="form-group  col-6">
+                <label>{{trans('posts.title_ar')}}<span class="text-danger">*</span></label>
+                <input disabled name="title_ar" placeholder="{{trans('posts.title_ar')}}"
+                       value="{{ old('title_ar', $data->title_ar ?? '') }}"
+                       class="form-control  {{ $errors->has('title_ar') ? 'border-danger' : '' }}" type="text"
+                       maxlength="255"/>
+            </div>
+            <div class="form-group  col-6">
+                <label>{{trans('posts.title_en')}}<span class="text-danger">*</span></label>
+                <input disabled name="title_en" placeholder="{{trans('posts.title_en')}}"
+                       value="{{ old('title_en', $data->title_en ?? '') }}"
+                       class="form-control  {{ $errors->has('title_en') ? 'border-danger' : '' }}" type="text"
+                       maxlength="255"/>
+                <span style="color: #FF5B5B" class="errors error_title_en" role="alert"></span>
+            </div>
+            <div class="col-lg-6  col-md-6">
+                <div class="form-group ">
+                    <label for="content_ar">{{trans('posts.content_ar')}}<span class="text-danger">*</span></label>
+                    <textarea disabled placeholder="{{trans('posts.content_ar')}}" name="content_ar" rows="10" cols="90"
+                              class="form-control     {{ $errors->has('content_ar') ? 'border-danger' : '' }}  ">{{ old('content_ar', $data->content_ar ?? '') }}</textarea>
                 </div>
-                <div class="form-group  col-4">
-                    <label>البريد الالكتروني<span
-                            class="text-danger">*</span></label>
-                    <input name="email" placeholder="ادخل البريد الالكتروني" value="{{ $data->email ?? ''}}"
-                           class="form-control  " type="email"
-                           maxlength="255" disabled/>
+                <span style="color: #FF5B5B" class="errors error_content_ar" role="alert"></span>
+            </div>
+            <div class="col-lg-6  col-md-6">
+                <div class="form-group ">
+                    <label for="content_en">{{trans('posts.content_en')}}<span class="text-danger">*</span></label>
+                    <textarea disabled placeholder="{{trans('posts.content_en')}}" name="content_en" rows="10" cols="90"
+                              class="form-control   {{ $errors->has('content_en') ? 'border-danger' : '' }}  ">{{ old('content_en', $data->content_en ?? '') }}</textarea>
                 </div>
-                <div class="form-group  col-4">
-                    <label>رقم الهاتف<span
-                            class="text-danger">*</span></label>
-                    <input name="phone" placeholder="ادخل رقم الهاتف" value="{{  $data->phone ?? '' }}"
-                           class="form-control  " type="tel"
-                           maxlength="255" disabled/>
-                </div>
-                <div class="form-group col-md-6">
-                    <label>صوره العميل </label>
-                    <div class="col-lg-8">
+                <span style="color: #FF5B5B" class="errors error_content_en" role="alert"></span>
+            </div>
 
-                        <div class="image-input image-input-outline" id="kt_image_1">
-                            <div class="image-input-wrapper"
-                                 style="background-image: url({{old('image', $data->image ?? 'default-image.png' )}})"></div>
+            <div class="form-group col-md-6">
+                <label> {{trans('posts.image')}}  </label>
+                <img class="img-thumbnail" src="{{$data->image}}" style="height: 150px; width: 150px;">
+            </div>
 
-                            <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-warning btn-shadow"
-                                  data-action="cancel" data-toggle="tooltip" title="Cancel avatar">
+        </div>
+    </div>
 
-                      <i class="ki ki-bold-close icon-xs text-muted"></i>
-                     </span>
-                        </div>
+
+    @foreach(   $data->comments as $comment )
+        <div class="card mt-2">
+            <div class="card-body">
+                <!--begin::User-->
+                <div class="d-flex align-items-center">
+                    <div class="symbol symbol-60 symbol-xxl-100 mr-5 align-self-start align-self-xxl-center">
+                        <div class="symbol-label" style="background-image:url({{$comment->user->image ?? 'default-image.png' }})"></div>
+                        <i class="symbol-badge bg-success"></i>
+                    </div>
+                    <div>
+                        <a  class="font-weight-bolder font-size-h5 text-dark-75 text-hover-primary">{{$comment->user->name}}</a>
                     </div>
                 </div>
+                <!--end::User-->
+                <!--begin::Contact-->
+                <div class="py-9">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <span class="font-weight-bold mr-2">{{trans('posts.comment')}}:</span>
+                        <a href="#" class="text-muted text-hover-primary">{{$comment->comment}}</a>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <span class="font-weight-bold mr-2">{{trans('posts.date')}}:</span>
+                        <span class="text-muted">{{$comment->created_at->diffForHumans()}}</span>
+                    </div>
+                </div>
+                <!--end::Contact-->
+                <!--begin::Nav-->
+                <div class="navi navi-bold navi-hover navi-active navi-link-rounded">
 
+                </div>
+                <!--end::Nav-->
             </div>
         </div>
-
-
-
-
-
-
+    @endforeach
 
 @endsection
 @section('script')

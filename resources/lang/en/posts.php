@@ -9,4 +9,6 @@ return [
     'content_en' => 'Content In English',
     'image' => 'Image',
     'action' => 'Action',
+    'date' => 'Date',
+    'comment' => 'Comment',
 ];

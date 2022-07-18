@@ -48,7 +48,8 @@ class PostController extends GeneralController
 
     public function show($id)
     {
-        $data = $this->model::with('Details')->findOrFail($id);
+        $data = $this->model::with('comments')->findOrFail($id);
+
         return view('dashboard.' . $this->viewPath . '.details', compact('data'));
     }
 
