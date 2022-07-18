@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\GeneralController;
-use App\Http\Requests\api\posts\CommentRequest;
-use App\Http\Requests\api\posts\PostRequest;
+use App\Http\Requests\Api\posts\CommentRequest;
+use App\Http\Requests\Api\posts\PostRequest;
 use App\Http\Resources\PostResource;
 use App\Models\Comment;
 use App\Models\Post;
