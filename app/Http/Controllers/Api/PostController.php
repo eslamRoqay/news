@@ -42,7 +42,8 @@ class PostController extends GeneralController
         $data=$request->validated();
         $data['user_id']= auth('api')->user()->id;
         Comment::create($data);
-        return $this->respondWithSuccess();
+        $msg=trans('posts.comment_added_successfully');
+        return $this->respondWithSuccess($msg);
     }
 
 }

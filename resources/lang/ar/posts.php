@@ -12,4 +12,5 @@ return [
     'date' => 'التاريخ',
     'comment' => 'التعلق',
     'details' => 'التفاصيل',
+    'comment_added_successfully' => 'تم اضافه التعليق بنجاح',
 ];

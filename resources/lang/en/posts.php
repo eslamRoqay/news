@@ -12,4 +12,6 @@ return [
     'date' => 'Date',
     'comment' => 'Comment',
     'details' => 'Details',
+    'comment_added_successfully' => 'Comment Added Successfully',
+
 ];
