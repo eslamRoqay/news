@@ -34,11 +34,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
         Route::post('/profile/update', [UserController::class, 'update_profile']);
         Route::post('/logout', [UserController::class, 'logout']);
     });
-    Route::group(['middleware' => 'jwt.verify', 'prefix' => "post"], function () {
 
+    Route::group(['middleware' => 'jwt.verify', 'prefix' => "post"], function () {
+        Route::post('comment', [PostController::class, 'addComment']);
+    });
+
+    Route::group([  'prefix' => "post"], function () {
         Route::get('/all', [PostController::class, 'posts']);
         Route::post('/', [PostController::class, 'selectPosts']);
-        Route::post('comment', [PostController::class, 'addComment']);
-
     });
 
